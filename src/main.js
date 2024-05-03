@@ -1,5 +1,3 @@
-import { createHash, pbkdf2Sync, randomBytes } from 'crypto'
-
 console.log('#55. JavaScript homework example file')
 
 /*
@@ -30,10 +28,10 @@ console.log('#55. JavaScript homework example file')
  */
 
 function generateHash(input) {
-  return createHash('sha256').update(input).digest('hex')
+  // code here
 }
 
-console.log(generateHash('Hello, World!'))
+// console.log(generateHash('Hello, World!'))
 
 /*
  *
@@ -66,13 +64,13 @@ console.log(generateHash('Hello, World!'))
  */
 
 function generatePasswordHash(password, salt, iterations = 10000, keylen = 64, digest = 'sha512') {
-  return pbkdf2Sync(password, salt, iterations, keylen, digest).toString('hex')
+  // code here
 }
 
 // Застосування функції
-const password = 'superSecret123'
-const salt = randomBytes(16).toString('hex')
-const hash = generatePasswordHash(password, salt)
+// const password = 'superSecret123'
+// const salt = randomBytes(16).toString('hex')
+// const hash = generatePasswordHash(password, salt)
 
 /*
  *
@@ -106,13 +104,12 @@ const hash = generatePasswordHash(password, salt)
  */
 
 function verifyPassword(inputPassword, storedHash, salt, iterations = 10000, keylen = 64, digest = 'sha512') {
-  const inputHash = generatePasswordHash(inputPassword, salt, iterations, keylen, digest)
-  return storedHash === inputHash
+  // code here
 }
 
 // Застосування функції
-const inputPassword = 'superSecret123'
-const isCorrect = verifyPassword(inputPassword, hash, salt)
-console.log(isCorrect ? 'Пароль вірний.' : 'Пароль невірний.')
+// const inputPassword = 'superSecret123'
+// const isCorrect = verifyPassword(inputPassword, hash, salt)
+// console.log(isCorrect ? 'Пароль вірний.' : 'Пароль невірний.')
 
 export { generateHash, generatePasswordHash, verifyPassword }
