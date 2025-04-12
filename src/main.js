@@ -1,7 +1,5 @@
 import { createHash, pbkdf2Sync, randomBytes } from 'crypto'
 
-console.log('#57. JavaScript homework example file')
-
 /*
  *
  * #1
