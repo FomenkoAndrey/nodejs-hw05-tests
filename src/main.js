@@ -1,5 +1,3 @@
-console.log('#57. JavaScript homework example file')
-
 /*
  *
  * #1
